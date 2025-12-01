@@ -10,7 +10,6 @@
     <input type="text" name="element" id="element">
     <input type="button" value="Add" id="add" onclick="addElement()">
     <input type="button" value="Display" id="display" onclick="displayElement()">
-    <hr>
     <p id="result"></p>
 </form>
 
@@ -24,7 +23,11 @@
         console.log(array);
     }
     function displayElement() {
-        id.innerHTML = array;
+        let e = "<hr>"
+        for (let i = 0; i < array.length; i++) {
+            e += "Elelemt " + i + " = " + array[i] + "<br>";
+        }
+        id.innerHTML = e;
     }
 </script>
 </html>
