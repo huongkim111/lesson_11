@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo và thao tác với mảng</title>
+</head>
+<body>
+<form>
+    <h2>Nhập phần tử mảng:</h2>
+    <input type="text" name="element" id="element">
+    <input type="button" value="Add" id="add" onclick="addElement()">
+    <input type="button" value="Display" id="display" onclick="displayElement()">
+    <hr>
+    <p id="result"></p>
+</form>
+
+</body>
+<script>
+    let array = [];
+    let element = document.getElementById('element');
+    let id = document.getElementById('result');
+    function addElement() {
+        array.push(element.value);
+        console.log(array);
+    }
+    function displayElement() {
+        id.innerHTML = array;
+    }
+</script>
+</html>
